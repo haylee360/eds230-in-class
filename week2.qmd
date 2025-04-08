@@ -1,0 +1,24 @@
+---
+title: "week2"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+source('solarpv.R')
+```
+
+
+```{r}
+load(here("data", "sierraczosolar.rda"))
+
+head(sierraczosolar)
+```
+
+```{r}
+solarpv(area = 01, solar = sierraczosolar)
+```
+
